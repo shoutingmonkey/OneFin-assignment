@@ -1,0 +1,57 @@
+::placeholder {
+  color: white;
+}
+
+.login {
+  color: white;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  width: 500px;
+  height: 500px;
+  border-radius: 10%;
+}
+
+legend {
+  font-size: 60px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  width: 350px;
+  height: 50px;
+  margin: 20px 0 20px 0;
+  outline: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.5rem;
+  color: white;
+}
+
+input:focus {
+  color: white;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+<<<<<<< HEAD
+
+.inactive {
+  color: gray;
+  cursor: auto;
+}
+=======
+>>>>>>> completed assignment

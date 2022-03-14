@@ -1,0 +1,37 @@
+.card {
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  transition: all 200ms ease-in;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 18px -9px rgb(148, 180, 159);
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.card > img {
+  object-fit: fill;
+  max-width: 100px;
+  max-height: 100px;
+  width: 100%;
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+.card__title {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.card__genres {
+}
