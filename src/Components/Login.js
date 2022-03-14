@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import { React, useState } from "react";
-import axios from "axios";
-import { useForm } from "react-hook-form";
-import "./Login.css";
-import { resolvePath } from "react-router-dom";
 
-function Login() {
-  const [loading, setLoading] = useState(false);
-
-=======
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -22,19 +12,11 @@ function Login() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
->>>>>>> completed assignment
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
-
-<<<<<<< HEAD
-  const onSubmit = async (data, e) => {
-    const { username, password } = data;
-    let response;
-    setLoading(true);
-=======
   useEffect(() => {
     async function redirect() {
       if (localStorage.getItem("authToken")) {
@@ -50,7 +32,6 @@ function Login() {
     const { username, password } = data;
     let response;
     setIsLoading(true);
->>>>>>> completed assignment
     try {
       response = await axios.post(
         "https://demo.credy.in/api/v1/usermodule/login/",
@@ -59,13 +40,6 @@ function Login() {
     } catch (e) {
       alert("Invalid Username or Password");
     }
-<<<<<<< HEAD
-
-    setLoading(false);
-  };
-
-  return (
-=======
     if (response?.data.is_success) {
       localStorage.setItem("authToken", response.data.data.token);
       setIsSuccess(true);
@@ -83,7 +57,6 @@ function Login() {
       ariaLabel="three-circles-rotating"
     />
   ) : (
->>>>>>> completed assignment
     <div className="login">
       <fieldset>
         <legend>Login</legend>
@@ -105,13 +78,8 @@ function Login() {
             placeholder="Enter Password"
           />
           {<p style={{ color: "red" }}>{errors.password?.message}</p>}
-<<<<<<< HEAD
-          <button type="submit" disabled={loading}>
-            {loading ? "loading..." : "Sign In"}
-=======
           <button type="submit" disabled={isLoading}>
             {isLoading ? "Loading..." : "Sign In"}
->>>>>>> completed assignment
           </button>
         </form>
       </fieldset>
